@@ -1,0 +1,95 @@
+/* FRAMEWORK */
+* {box-sizing: border-box;margin: 0;}
+body {
+    width: 80vw;
+    margin: auto;
+    transition: font-size 1s;
+}
+header {
+    height: 25vh;
+    background: url("imgs/headerImg.jpeg") no-repeat center;
+    transition: height 1s;
+}
+section {
+    height: auto;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+main {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+main article {
+    width: 26.66vw;
+    height: inherit;
+    padding: 1em;
+    transition: width 1s;
+}
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    transition: color 1s;
+}
+section nav {display: none;}
+
+/* APPEARANCE */
+body {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.09em;
+    color: #545454;
+}
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    color: #59e0d7;
+}
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+p, ul {
+    line-height: 2em;
+}
+nav a {
+    color: #59e0d7;
+    text-decoration: none;
+    transition: color 1s;
+    padding: .5em;
+}
+nav a:hover {color: #545454;}
+main article {
+    display: flex;
+    flex-direction: column;
+}
+main article:nth-of-type(1) {text-align: right;justify-content: center;}
+figure {
+    background: url("imgs/Johnny%20Rivera.JPG") no-repeat top;
+    background-size: cover;
+    width: 100%;
+    height: 7em;
+    margin-bottom: 1em;
+}
+footer {color: #59e0d7;}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 900px) {
+    section {flex-direction: column;}
+    header {height: 15vh;}
+    main {flex-direction: column;}
+    main article {width: 100%;}
+    main article:nth-of-type(1) {text-align: left;}
+    figure {height: 16em;}
+    footer {justify-content: center;color: #545454;}
+    footer nav {display: none;}
+    section nav {display: block;}
+}
+@media only screen and (max-width: 550px) {
+    body {font-size: .9em;}
+    header {background-attachment: scroll;background-position: center;}
+    figure {height: 9em}
+}
